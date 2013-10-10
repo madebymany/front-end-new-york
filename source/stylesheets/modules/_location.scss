@@ -32,5 +32,9 @@
 
 #js-gmap {
   width: 100%;
-  height: 380px;
+  height: 580px;
+
+  @include media-query($bp-small) {
+    height: 280px;
+  }
 }

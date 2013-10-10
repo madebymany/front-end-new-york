@@ -45,6 +45,7 @@
 @include media-query($bp-mid) {
   .site-footer__desc,
   .site-footer__sponsors {
+    text-align: center;
     width: auto;
     float: none;
   }
@@ -56,6 +57,10 @@
 }
 
 @include media-query($bp-small) {
+  .site-footer__container {
+    padding: 3em 1em;
+  }
+
   .site-footer__desc p {
     font-size: 1em;
   }

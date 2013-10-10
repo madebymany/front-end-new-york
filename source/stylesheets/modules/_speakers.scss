@@ -51,6 +51,10 @@
   padding: .5em;
   text-align: center;
   background-color: rgba($current-month, .9);
+
+  @include media-query($bp-small) {
+    font-size: 1.5em;
+  }
 }
 
 .speaker__talk-title {
@@ -58,9 +62,17 @@
   font-size: 1.75em;
   text-align: center;
   margin: 1em 0 .75em;
+
+  @include media-query($bp-small) {
+    font-size: 1.5em;
+  }
 }
 
 .speaker p {
   font-size: 1.25em;
   margin: 0 0 .5em 0;
+
+  @include media-query($bp-small) {
+    font-size: 1.1em;
+  }
 }

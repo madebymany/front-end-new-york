@@ -5,6 +5,8 @@ body {
 
 body {
   -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  min-width: 320px;
 }
 
 *, *:before, *:after {
