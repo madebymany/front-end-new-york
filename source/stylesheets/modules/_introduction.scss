@@ -1,0 +1,32 @@
+.introduction {
+  background-color: lighten($current-month, 45%);
+  color: darken($current-month, 20%);
+}
+
+.introduction__container {
+  @extend .site-width;
+  padding: 10em 2em;
+}
+
+.introduction p {
+  font-size: 2em;
+}
+
+@include media-query($bp-small) {
+  .introduction__container {
+    padding: 5em 2em;
+  }
+
+  .introduction p {
+    font-size: 1.25em;
+  }
+}
+
+.origins {
+
+}
+
+.origins__container {
+  @extend .site-width;
+  padding: 8em 2em;
+}

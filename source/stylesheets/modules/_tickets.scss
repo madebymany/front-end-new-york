@@ -1,0 +1,34 @@
+.tickets {
+  background-color: $current-month;
+  color: #fff;
+}
+
+.tickets__container {
+  @extend %content-block;
+  padding: 8em 2em;
+  text-align: center;
+}
+
+.tickets p {
+  font-size: 2em;
+
+  @include media-query($bp-small) {
+    font-size: 1.5em;
+  }
+}
+
+.tickets__title {
+  color: #fff;
+}
+
+.tickets__cta {
+  margin-bottom: 10px;
+
+  &:hover {
+    color: $current-month;
+  }
+
+  @include media-query($bp-small) {
+    font-size: 1.25em;
+  }
+}

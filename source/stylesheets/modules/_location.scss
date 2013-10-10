@@ -1,0 +1,36 @@
+.location {
+
+}
+
+.location__container {
+  background-color: lighten($current-month, 45%);
+}
+
+.location__details {
+  padding: 1.25em 1em;
+  text-align: center;
+  @extend .site-width;
+  color: darken($current-month, 20%);
+  font-weight: normal;
+  font-size: 2em;
+  position: relative;
+
+  @include media-query($bp-small) {
+    font-size: 1.5em;
+  }
+}
+
+.location__details:after {
+  content: '';
+  border: 30px solid transparent;
+  border-top-color: lighten($current-month, 45%);
+  position: absolute;
+  bottom: -60px; left: 50%;
+  margin-left: -15px;
+  z-index: 999;
+}
+
+#js-gmap {
+  width: 100%;
+  height: 380px;
+}

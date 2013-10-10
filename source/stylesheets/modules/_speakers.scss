@@ -1,0 +1,66 @@
+.speakers__container {
+  @extend %content-block;
+  overflow: hidden;
+}
+
+.speakers-list {
+  margin: 0; padding: 0;
+  list-style: none;
+}
+
+.speaker {
+  padding: 1em;
+  width: 33.3333333%;
+  float: left;
+  border: 2px solid transparent;
+
+  &:hover {
+    border-color: $current-month;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  @include media-query($bp-mid) {
+    width: auto;
+    float: none;
+  }
+}
+
+.speaker__information {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: rgba($current-month, .4);
+  }
+}
+
+.speaker__name {
+  color: #fff;
+  font-size: 1.75em;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 0; left: 0;
+  width: 100%;
+  padding: .5em;
+  text-align: center;
+  background-color: rgba($current-month, .9);
+}
+
+.speaker__talk-title {
+  color: darken($current-month, 20%);
+  font-size: 1.75em;
+  text-align: center;
+  margin: 1em 0 .75em;
+}
+
+.speaker p {
+  font-size: 1.25em;
+  margin: 0 0 .5em 0;
+}

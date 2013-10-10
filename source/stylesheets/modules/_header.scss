@@ -1,0 +1,99 @@
+.site-header {
+  position: relative;
+  height: 100%;
+  background: darken($current-month, 20%) url(../images/bg_1.jpg) no-repeat center center;
+  background-size: cover;
+  display: table;
+}
+
+.site-header__wrap {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.site-header:after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  bottom: 0; left: 0;
+  border: 10px solid $current-month;
+  background-color: rgba(darken($current-month, 20%), .8);
+}
+
+.site-header__primary {
+  text-align: center;
+
+  -webkit-animation: fadeInDown .25s linear .5s forwards;
+       -moz-animation: fadeInDown .25s linear .5s forwards;
+         -o-animation: fadeInDown .25s linear .5s forwards;
+            animation: fadeInDown .25s linear .5s forwards;
+}
+
+.site-logo {
+  font-family: 'Sina Nova', Georgia, serif;
+  font-size: 4em;
+  line-height: .9;
+  text-transform: lowercase;
+  color: #fff;
+}
+
+.site-logo__wrap {
+  display: inline-block;
+  padding: .15em;
+  border-bottom: 4px solid #fff;
+  white-space: nowrap;
+}
+
+.site-header__primary,
+.site-header__secondary {
+  position: relative;
+  z-index: 1;
+}
+
+.site-header__secondary {
+  margin-top: 50px;
+}
+
+.site-header__primary,
+.next-event-details,
+.site-header__cta {
+  opacity: 0;
+
+  -webkit-animation: fadeInDown .25s ease-in-out .5s forwards;
+    -moz-animation: fadeInDown .25s ease-in-out .5s forwards;
+      -o-animation: fadeInDown .25s ease-in-out .5s forwards;
+        animation: fadeInDown .25s ease-in-out .5s forwards;
+}
+
+.site-header__cta {
+  -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+      -o-animation-delay: 1s;
+        animation-delay: 1s;
+}
+
+@include media-query($bp-mid) {
+  .site-logo {
+    font-size: 3em;
+  }
+}
+
+@include media-query($bp-small) {
+  .site-header {
+    padding: 40px 25px;
+  }
+
+  .site-logo {
+    font-size: 2.25em;
+  }
+
+  .site-header__secondary {
+    margin-top: 10px;
+  }
+
+  .site-header__cta {
+    font-size: 1.25em;
+    margin-top: 10px;
+  }
+}

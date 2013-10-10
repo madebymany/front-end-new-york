@@ -1,0 +1,46 @@
+.cta {
+  text-transform: uppercase;
+  border: 2px solid $current-month;
+  text-decoration: none;
+  padding: 18px 15px;
+  color: $current-month;
+  border-radius: 3px;
+}
+
+.cta--transition {
+  @include transition(all, 0.07s, ease-in);
+
+  &:hover {
+    @extend .cta--dark;
+  }
+}
+
+.cta--primary {
+  @extend .cta;
+  @extend .cta--transition;
+  font-weight: bold;
+  display: block;
+  margin: 50px auto;
+  padding: 25px 15px;
+  max-width: 275px;
+  text-align: center;
+  font-size: 1.75em;
+}
+
+.cta--dark {
+  background-color: $current-month;
+  color: #fff;
+}
+
+.cta--white {
+  @extend .cta--primary;
+  @extend .cta--transition;
+
+  border-color: #fff;
+  color: #fff;
+
+  &:hover {
+    background-color: white;
+    color: darken($current-month, 20%);
+  }
+}
