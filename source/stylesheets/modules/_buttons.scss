@@ -25,6 +25,12 @@
   max-width: 275px;
   text-align: center;
   font-size: 1.75em;
+
+  @include media-query($bp-small) {
+    font-size: 1.5em;
+    padding: 20px 15px;
+    max-width: 240px;
+  }
 }
 
 .cta--dark {

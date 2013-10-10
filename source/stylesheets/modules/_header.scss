@@ -67,6 +67,7 @@
 }
 
 .site-header__cta {
+
   -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
       -o-animation-delay: 1s;
@@ -93,7 +94,9 @@
   }
 
   .site-header__cta {
-    font-size: 1.25em;
+    font-size: 1.1em;
     margin-top: 10px;
+    max-width: 240px;
+    padding: 20px 15px;
   }
 }
